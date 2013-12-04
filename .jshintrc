@@ -1,4 +1,5 @@
 {
+    "node": true,
     "browser": true,
     "indent": 4,
     "laxbreak": true,

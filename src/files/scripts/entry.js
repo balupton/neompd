@@ -1,21 +1,11 @@
-/*global require */
+/**
+ * The entry point of our application.
+ */
 
-require.config({
-    paths: {
-        'jquery': '../vendor/jquery/jquery',
-        'webfont': '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont'
-    },
-    shim: {
-        'jquery': {
-            exports: 'jQuery'
-        },
-        'webfont': {
-            exports: 'WebFont'
-        }
-    }
-});
-
-/* Begin rAF polyfill */
+var $ = require('../vendor/jquery/jquery.js');
+var Renderer = require('./Renderer');
+var Application = require('./Application');
+var articleSet = require('./testTileSet');
 
 // Adapted from https://gist.github.com/paulirish/1579671 which derived from
 // http://paulirish.com/2011/requestanimationframe-for-smart-animating/
@@ -50,19 +40,14 @@ if (!Date.now)
     }
 }());
 
-/* End rAF polyfill */
 window.setTimeoutWithRAF = function (fn, t) {
     return window.setTimeout(window.requestAnimationFrame.bind(this, fn), t);
 };
 
-require([
-    './webfont',
-    './Application',
-    './Renderer',
-    './testTileSet'
-], function (WebFont, Application, Renderer, articleSet) {
-    'use strict';
-
+/**
+ * Load the webfonts.
+ */
+$.getScript('http://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js', function() {
     WebFont.load({
         custom: {
             families: [ 'Plantin', 'PlantinBold', /*'PlantinBoldItalic',*/ 'TradeGothic', 'TradeGothicBold' ],

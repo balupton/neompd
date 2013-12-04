@@ -1,11 +1,8 @@
 /*global define */
 
-define([
-    'jquery',
-    './TileField',
-    './Article'
-], function ($, TileField, Article) {
-    'use strict';
+var $ = require('../vendor/jquery/jquery.js');
+var TileField = require('./TileField');
+var Article = require('./Article');
 
     function getArticleSlug(hash) {
         var tokens = /^#articles\/(.+)/.exec(hash);
@@ -64,5 +61,4 @@ define([
         this.$.trigger('navigated', [ isViaLinkClick ]);
     };
 
-    return Application;
-});
+module.exports = Application;

@@ -1,7 +1,6 @@
 /*global define */
 
-define(['jquery'], function ($) {
-    'use strict';
+var $ = require('../vendor/jquery/jquery.js');
 
     var articleMap = {},
         id = 0;
@@ -24,5 +23,4 @@ define(['jquery'], function ($) {
 
     $("#data").remove();
 
-    return articleMap;
-});
+module.exports = articleMap;
