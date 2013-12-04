@@ -2,9 +2,6 @@
  * The entry point of our application.
  */
 
-/**
- * Dependencies
- */
 var $ = require('../vendor/jquery/jquery.js');
 var Renderer = require('./Renderer');
 var Application = require('./Application');

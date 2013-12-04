@@ -1,9 +1,7 @@
 /*global define */
-
 "use strict";
 
 var $ = require('../vendor/jquery/jquery.js');
-
 
     function TileRenderer(tile, app, renderer) {
         this.app = app;
