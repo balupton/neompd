@@ -2,8 +2,6 @@
  * The entry point of our application.
  */
 
-'use strict';
-
 /**
  * Dependencies
  */

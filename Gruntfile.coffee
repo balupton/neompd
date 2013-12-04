@@ -25,10 +25,18 @@ module.exports = (grunt) ->
         failOnError: true
         optimize:
           minimize: true
+    
+    jshint:
+      options:
+        jshintrc: true
+      scan: [
+        "src/files/scripts/*.js"
+      ]
 
   # Load all available tasks.
   grunt.loadNpmTasks "grunt-contrib-cssmin"
   grunt.loadNpmTasks "grunt-webpack"
+  grunt.loadNpmTasks "grunt-contrib-jshint"
 
   # On the production environment, run Webpack and the CSS minifier.
   grunt.registerTask "production", ["webpack", "cssmin"]

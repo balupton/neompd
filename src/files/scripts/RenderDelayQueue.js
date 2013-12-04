@@ -1,5 +1,5 @@
 
-'use strict';
+"use strict";
 
     function RenderDelayQueue() {
         this.actionList = [];

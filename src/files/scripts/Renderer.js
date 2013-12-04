@@ -1,5 +1,5 @@
 /*global define */
-'use strict';
+"use strict";
 
 var $ = require('../vendor/jquery/jquery.js');
 var RenderDelayQueue = require('./RenderDelayQueue');
