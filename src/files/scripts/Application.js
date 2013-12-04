@@ -4,8 +4,6 @@ var $ = require('../vendor/jquery/jquery.js');
 var TileField = require('./TileField');
 var Article = require('./Article');
 
-    'use strict';
-
     function getArticleSlug(hash) {
         var tokens = /^#articles\/(.+)/.exec(hash);
         return tokens && tokens[1];

@@ -503,4 +503,4 @@ var TileRenderer = require('./TileRenderer');
         }
     };
 
-    module.exports = Renderer;
+module.exports = Renderer;

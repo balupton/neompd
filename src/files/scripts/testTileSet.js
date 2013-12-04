@@ -2,8 +2,6 @@
 
 var $ = require('../vendor/jquery/jquery.js');
 
-    'use strict';
-
     var articleMap = {},
         id = 0;
 

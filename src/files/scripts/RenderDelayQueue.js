@@ -61,4 +61,4 @@
         throw 'render callback not found';
     };
 
-    module.exports = RenderDelayQueue;
+module.exports = RenderDelayQueue;

@@ -2,8 +2,6 @@
 
 var $ = require('../vendor/jquery/jquery.js');
 
-    'use strict';
-
     var CONTENT_URL_PREFIX = '/posts/',
         CONTENT_URL_SUFFIX = '.html';
 
@@ -22,4 +20,3 @@ var $ = require('../vendor/jquery/jquery.js');
     };
 
 module.exports = Article;
-

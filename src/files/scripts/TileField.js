@@ -146,4 +146,4 @@ var $ = require('../vendor/jquery/jquery.js');
         }
     };
 
-    module.exports = TileField;
+module.exports = TileField;
