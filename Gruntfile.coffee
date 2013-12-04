@@ -24,7 +24,7 @@ module.exports = (grunt) ->
           reasons: true
         failOnError: true
         optimize:
-          minimize: false
+          minimize: true
 
   # Load all available tasks.
   grunt.loadNpmTasks "grunt-contrib-cssmin"

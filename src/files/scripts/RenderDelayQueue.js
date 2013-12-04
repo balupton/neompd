@@ -1,9 +1,6 @@
 
 'use strict';
 
-var $ = require('../vendor/jquery/jquery.js');
-
-
     function RenderDelayQueue() {
         this.actionList = [];
         this.isProcessing = false;
