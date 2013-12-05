@@ -15,7 +15,7 @@ module.exports = (grunt) ->
     webpack:
       development:
         context: "out/scripts"
-        entry: "./entry.js"
+        entry: "./main.js"
         output:
           path: "out/scripts/"
           filename: "main.js"
