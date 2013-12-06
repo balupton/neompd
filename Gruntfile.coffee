@@ -14,20 +14,20 @@ module.exports = (grunt) ->
     # Use Webpack to bundle all the JavaScript together correctly.
     webpack:
       development:
-        context: "out/scripts"
+        context: "src/files/scripts"
         entry: "./entry.js"
         output:
-          path: "out/scripts/"
+          path: "src/files/scripts/"
           filename: "main.js"
         stats:
           colors: true
           reasons: true
         failOnError: true
       production:
-        context: "out/scripts"
+        context: "src/files/scripts"
         entry: "./entry.js"
         output:
-          path: "out/scripts/"
+          path: "src/files/scripts/"
           filename: "main.js"
         optimize:
           minimize: true

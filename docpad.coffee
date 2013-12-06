@@ -45,11 +45,18 @@ docpadConfig = {
             ]
 
     environments:
+        development:
+            plugins:
+                grunt:
+                    # Run the production environment Grunt tasks.
+                    writeAfter: false
+                    populateCollectionsBefore: ["development"]
         production:
             plugins:
                 grunt:
                     # Run the production environment Grunt tasks.
-                    gruntTasks: ["production"]
+                    writeAfter: false
+                    populateCollectionsBefore: ["production"]
 }
 # Export the DocPad Configuration
 module.exports = docpadConfig
