@@ -15,7 +15,7 @@ module.exports = (grunt) ->
     webpack:
       development:
         context: "out/scripts"
-        entry: "./main.js"
+        entry: "./entry.js"
         output:
           path: "out/scripts/"
           filename: "main.js"
@@ -25,13 +25,13 @@ module.exports = (grunt) ->
         failOnError: true
       production:
         context: "out/scripts"
-        entry: "./main.js"
+        entry: "./entry.js"
         output:
           path: "out/scripts/"
           filename: "main.js"
         optimize:
           minimize: true
-    
+
     jshint:
       options:
         jshintrc: true
