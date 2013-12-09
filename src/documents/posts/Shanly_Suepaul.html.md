@@ -7,7 +7,7 @@ quote: "Inspect. Adapt."
 coverImageUrl: ""
 authorImageUrl: "/images/avatar/Sally_Chan.png"
 twitter: "https://twitter.com/shanlyj"
-dribbble: 
+dribbble:
 linkedin: "http://www.linkedin.com/profile/view?id=61522444"
 github: "https://github.com/shanly-suepaul"
 layout: employee
@@ -22,4 +22,4 @@ I'm a Certified ScrumMaster and I hold a Hons. B.Sc. in Computer Science from th
 
 ## What I do
 
-I employ my technical skills alongside Agile to improve quality, efficiency, and value delivery in team settings.  My technical specialities are PHP, JavaScript, QA Automation, and Drupal. I have a strong focus on QA and integrating QA into Agile teams.
+I employ my technical skills alongside Agile to improve quality, efficiency, and value delivery in team settings. My technical specialities are PHP, JavaScript, QA Automation, and Drupal. I have a strong focus on QA and integrating QA into Agile teams.
