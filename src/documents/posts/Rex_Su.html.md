@@ -3,7 +3,7 @@ name: "Rex Su"
 role: "Front-End Developer"
 tagList: ["people"]
 skill: "Javascript, Usability, Performance"
-quote: "Behold the most ferocious T-shaped individual on the planet: T-Rex."
+quote: "You don’t become a champion overnight, you become a champion way before that."
 coverImageUrl: ""
 authorImageUrl: "/images/avatar/Rex_Su.png"
 twitter: "https://twitter.com/rex_ds"
