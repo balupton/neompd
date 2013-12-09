@@ -1,9 +1,6 @@
 /*global define */
 
-define([
-    'jquery'
-], function ($) {
-    'use strict';
+var $ = require('../vendor/jquery/jquery.js');
 
     var CONTENT_URL_PREFIX = '/posts/',
         CONTENT_URL_SUFFIX = '.html';
@@ -22,5 +19,4 @@ define([
         $(this).trigger('destroyed');
     };
 
-    return Article;
-});
+module.exports = Article;

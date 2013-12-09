@@ -3,7 +3,7 @@ name: "Nate Archer"
 role: "Senior Vice President of Global Interaction Design"
 tagList: ["people"]
 skill: "User Research, Interaction, Design"
-quote: "We are the music makers, and we are the dreamers of dreams... we are the movers and shakers of the world for ever, it seems."
+quote: "How Might We..."
 coverImageUrl: ""
 authorImageUrl: "/images/avatar/Nate_Archer.png"
 twitter: "https://twitter.com/natearcher"

@@ -26,6 +26,7 @@ docpadConfig = {
         marked: true
         less: true
         sunny: true
+        grunt: true
 
     plugins:
         eco: {}
@@ -42,6 +43,20 @@ docpadConfig = {
                     account: process.env.DOCPAD_SUNNY_ACCOUNT
                     secretKey: process.env.DOCPAD_SUNNY_SECRETKEY
             ]
+
+    environments:
+        development:
+            plugins:
+                grunt:
+                    # Run the production environment Grunt tasks.
+                    writeAfter: false
+                    populateCollectionsBefore: ["development"]
+        production:
+            plugins:
+                grunt:
+                    # Run the production environment Grunt tasks.
+                    writeAfter: false
+                    populateCollectionsBefore: ["production"]
 }
 # Export the DocPad Configuration
 module.exports = docpadConfig

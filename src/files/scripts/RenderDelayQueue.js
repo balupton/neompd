@@ -1,7 +1,4 @@
-define([
-    'jquery'
-], function ($) {
-    'use strict';
+"use strict";
 
     function RenderDelayQueue() {
         this.actionList = [];
@@ -63,5 +60,4 @@ define([
         throw 'render callback not found';
     };
 
-    return RenderDelayQueue;
-});
+module.exports = RenderDelayQueue;

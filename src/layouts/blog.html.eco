@@ -11,9 +11,14 @@
 
         <% if @document.author: %>
             <div class="author">
-                <img src="<%= @document.authorImageUrl %>" class="avatar" />
-                <% if @document.author: %>
-                    <a href="#articles/<%= @document.author.split(' ').join('_') %>"><span class="author-name"><%= @document.author %></span></a><% end %>
+                <% if @document.authorImageUrl: %>
+                    <a href="#articles/<%= @document.author.split(' ').join('_') %>">
+                        <img src="<%= @document.authorImageUrl %>" class="avatar" />
+                    </a>
+                <% end %>
+                <a href="#articles/<%= @document.author.split(' ').join('_') %>">
+                    <span class="author-name"><%= @document.author %></span>
+                </a>
                 <span class="date"> <%= @moment(@document.date).format('dddd, MMM DD, YYYY') %> </span>
             </div>
         <% end %>
