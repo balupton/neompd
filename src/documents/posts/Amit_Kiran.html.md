@@ -5,9 +5,9 @@ tagList: ["people"]
 skill: "Interaction Design, User Research, Usability Testing, Information Architecture, Customer Satisfaction, Consulting, Marketing, Sales"
 quote: ""
 coverImageUrl: ""
-authorImageUrl: "/images/avatar/Amit_ Kiran.png"
+authorImageUrl: "/images/avatar/Amit_Kiran.png"
 twitter: "http://twitter.com/amitkiran82"
-dribbble: 
+dribbble:
 linkedin: "www.linkedin.com/in/amitkiran"
 github:
 layout: employee
