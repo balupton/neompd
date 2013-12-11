@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Myplanet Digital</title>
+---
+layout: "default"
+---
 
-    <link rel="stylesheet" href="styles/main.css">
-</head>
-
-<body>
-        <div id="nav">
-                <a id="logo" href="#">Myplanet Digital</a>
-                <div id="menu-button"><span>Show Menu</span></div>
-                <div id="menu">
-                        <ul>
-                    <li><a href="#articles/Contact_Us" class="contact">Contact Us</a></li>
-                                <% for tag in @getCollection("tags").toJSON(): %>
-                                        <li><a href="#tags/<%= tag.name.split('.')[0] %>" class="<%= tag.label.toLowerCase() %>"><%= tag.label %></a></li>
-                                <% end %>
-                        </ul>
-                </div>
-        </div>
-    <a href="#"><div id="close-button">Close</div></a>
-    <div id="content"></div>
 
     <ul id="data">
-        <% for post in @getCollection("posts").toJSON(): %>
+        <% for post in @getCollection("data").toJSON(): %>
             <% postHash = '#articles/' + post.url.split('/').pop().replace(/\..*$/, ''); %>
             <% postTagList = post.tagList or [] %>
 
-            <li data-tags="<%= JSON.stringify(postTagList) %>">
+            <li data-url="<%= post.url %>" data-tags="<%= JSON.stringify(postTagList) %>">
                 <% if post.layout is "employee": %>
                     <div class="tile people">
                         <a href="<%= postHash %>">
@@ -66,11 +46,3 @@
             </li>
         <% end %>
     </ul>
-
-    <!-- @todo replace with production asset pipeline -->
-    <!--[if IE 8]>
-    <script src="vendor/augment.js/augment.js"></script>
-    <![endif]-->
-    <script src="scripts/main.js" defer="defer" async="async"></script>
-</body>
-</html>

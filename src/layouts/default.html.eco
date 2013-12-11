@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Myplanet Digital</title>
+    <%- @getBlock('meta').toHTML() %>
+
+    <%- @getBlock('styles').add(@site.styles).toHTML() %>
+</head>
+
+<body>
+    <div id="nav">
+        <a id="logo" href="#">Myplanet Digital</a>
+        <div id="menu-button"><span>Show Menu</span></div>
+        <div id="menu">
+                <ul>
+            <li><a href="#articles/Contact_Us" class="contact">Contact Us</a></li>
+                        <% for tag in @getCollection("tags").toJSON(): %>
+                                <li><a href="#tags/<%= tag.name.split('.')[0] %>" class="<%= tag.label.toLowerCase() %>"><%= tag.label %></a></li>
+                        <% end %>
+                </ul>
+        </div>
+    </div>
+    <a href="#"><div id="close-button">Close</div></a>
+
+    <div id="content"><!-- CONTENT/ --><%- @content %><!-- /CONTENT --></div>
+
+    <!-- @todo replace with production asset pipeline -->
+    <!--[if IE 8]>
+    <script src="vendor/augment.js/augment.js"></script>
+    <![endif]-->
+    <%- @getBlock('scripts').add(@site.scripts).toHTML() %>
+</body>
+</html>

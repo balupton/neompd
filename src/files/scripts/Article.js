@@ -2,6 +2,7 @@
 
 var $ = require('../vendor/jquery/jquery.js');
 
+    // /restapi/file
     var CONTENT_URL_PREFIX = '/posts/',
         CONTENT_URL_SUFFIX = '.html';
 
@@ -15,7 +16,6 @@ var $ = require('../vendor/jquery/jquery.js');
     Article.prototype.destroy = function () {
         // cancel in-flight transfer
         this.content.abort();
-
         $(this).trigger('destroyed');
     };
 

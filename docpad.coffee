@@ -5,9 +5,24 @@
 docpadConfig = {
     # ...
 
+    databaseCache: true
+
+    templateData:
+        site:
+            styles: [
+                "/styles/main.css"
+            ]
+
+            scripts: [
+                "/scripts/main.js"
+            ]
+
     collections:
-        posts: ->
-            @getCollection("html").findAllLive({ relativeOutDirPath:'posts', unlisted: $ne: true }).setComparator((a, b) ->
+        data: ->
+            @getCollection("html").findAllLive({
+                relativeOutDirPath: $in: ['people','posts']
+                unlisted: $ne: true
+            }).setComparator((a, b) ->
                 if a.get('priority')
                     (if b.get('priority') then b.get('priority') - a.get('priority') else -1)
                 else if b.get('priority')
@@ -16,8 +31,20 @@ docpadConfig = {
                     b.get('date').getTime() - a.get('date').getTime()
             )
 
+        people: ->
+            @getCollection('data').findAllLive(
+                relativeOutDirPath: 'people'
+            )
+
+        posts: ->
+            @getCollection('data').findAllLive(
+                relativeOutDirPath: 'posts'
+            )
+
         tags: ->
-            @getCollection("documents").findAllLive({relativeOutDirPath:'tags'})
+            @getCollection("documents").findAllLive(
+                relativeOutDirPath: 'tags'
+            )
 
     skipUnsupportedPlugins: false
 

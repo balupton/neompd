@@ -219,6 +219,8 @@ var TileRenderer = require('./TileRenderer');
         }.bind(this));
 
         this.app.currentArticle.content.always(function (html) {
+            html = html.replace(/^[\s\S]*<!-- CONTENT\/ -->/, '').replace(/<!-- \/CONTENT -->[\s\S]*$/, '');
+            console.log(html);
             window.setTimeoutWithRAF(function() {
                 var banner,
                     content;

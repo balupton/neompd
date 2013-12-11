@@ -1,3 +1,7 @@
+---
+layout: "default"
+---
+
 <div class="employee">
     <div class="banner">
         <% if @document.coverImageUrl: %>
@@ -39,7 +43,7 @@
         <%- @content %>
 
         <footer>
-            <% authoredPosts = @getCollection("posts").findAll(layout: { $ne: "employee" }, author: { $eq: @document.name }).toJSON() %>
+            <% authoredPosts = @getCollection("data").findAll(layout: { $ne: "employee" }, author: { $eq: @document.name }).toJSON() %>
 
             <% if authoredPosts.length: %>
                 <h3>Articles I've Written</h3>

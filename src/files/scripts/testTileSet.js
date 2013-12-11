@@ -7,15 +7,17 @@ var $ = require('../vendor/jquery/jquery.js');
 
     $("#data li").each(function () {
         var $li = $(this),
-            tags;
+            tags, url;
 
         try {
+            url = $li.data('url');
             tags = JSON.parse($li.attr('data-tags'));
         } catch (e) {
             tags = [];
         }
 
         articleMap[id++] = {
+            url: url,
             tags: tags,
             html: $li.html()
         };

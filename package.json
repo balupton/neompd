@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "bower": "~1",
-    "docpad": "~6.54.9",
+    "docpad": "~6.57.1",
     "docpad-plugin-eco": "~2.0.2",
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-less": "~2.2.0",
@@ -17,7 +17,9 @@
     "docpad-plugin-grunt": "~2.1.1",
     "grunt-contrib-cssmin": "~0.6.2",
     "grunt-webpack": "~0.11.1",
-    "grunt-contrib-jshint": "~0.7.2"
+    "grunt-contrib-jshint": "~0.7.2",
+    "docpad-plugin-restapi": "~2.1.4",
+    "docpad-plugin-inlinegui": "~2.0.3"
   },
   "devDependencies": {
     "wd": "latest",
